@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">Trainning_proj</string>
+    <string name="app_name">Egy Guide </string>
+    <string name="Name">Enter your Name</string>
+    <string name="email">Enter your E-mail</string>
+    <string name="pass">Enter your Password</string>
+    <string name="rePass">Renter your Password</string>
+    <string name="mobile">Enter your Phone</string>
+    <string name="so_Signin">Already have an account?</string>
+    <string name="btn_signin">Sign In</string>
+    <string name="btn_signUp">Sign Up</string>
 </resources>
