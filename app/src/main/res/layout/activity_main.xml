@@ -97,33 +97,5 @@ android:layout_height="match_parent">
     app:layout_constraintRight_toRightOf="@id/layout_signUp"
     app:layout_constraintTop_toBottomOf="@id/et1_rePass"
     />
-<TextView
-    android:id="@+id/tv1_haveAccount"
-    android:layout_width="wrap_content"
-    android:layout_height="60dp"
-    android:layout_marginTop="64dp"
-    android:text="@string/so_Signin"
-    android:textColor="@color/gray900"
-    android:textSize="24dp"
-    android:textStyle="bold|italic"
-    app:layout_constraintHorizontal_bias="0.112"
-    app:layout_constraintLeft_toLeftOf="@id/layout_signUp"
-    app:layout_constraintRight_toRightOf="@id/layout_signUp"
-    app:layout_constraintTop_toBottomOf="@id/btn_signUp" />
-
-<Button
-    android:id="@+id/btn1_signIn"
-    android:layout_width="200dp"
-    android:layout_height="50dp"
-    android:background="#94E1CBCB"
-    android:gravity="center"
-    android:text="@string/btn_signin"
-    android:textColor="@color/gray900"
-    android:textSize="24dp"
-    android:textStyle="bold|italic"
-    app:layout_constraintHorizontal_bias="0.857"
-    app:layout_constraintLeft_toLeftOf="@id/layout_signUp"
-    app:layout_constraintRight_toRightOf="@id/layout_signUp"
-    app:layout_constraintTop_toBottomOf="@id/tv1_haveAccount" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
