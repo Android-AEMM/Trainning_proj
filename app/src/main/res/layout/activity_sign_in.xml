@@ -59,7 +59,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="36dp"
         android:gravity="center"
-        android:text="Don't have account? Create one now! "
+        android:text="@string/so_Signin"
         android:textColor="@color/gray900"
         android:textSize="22sp"
         android:textStyle="bold"
