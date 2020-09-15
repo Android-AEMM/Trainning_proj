@@ -73,10 +73,8 @@ android:layout_height="match_parent">
     android:id="@+id/et1_rePass"
     android:layout_width="350dp"
     android:layout_height="70dp"
-    android:drawableRight="@drawable/ic_con"
     android:background="@drawable/btn_background"
     android:layout_margin="7dp"
-
     android:textSize="24sp"
     android:padding="10dp"
     android:hint="@string/rePass"
@@ -111,5 +109,17 @@ android:layout_height="match_parent">
         app:layout_constraintLeft_toLeftOf="@id/et1_pass"
         app:layout_constraintRight_toRightOf="@id/layout_signUp"
         app:layout_constraintTop_toTopOf="@id/et1_pass"
+        app:layout_constraintVertical_bias="0.466" />
+    <ImageView
+        android:id="@+id/show2"
+        android:layout_width="104dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="272dp"
+        android:src="@drawable/ic_baseline_visibility_24"
+        app:layout_constraintBottom_toBottomOf="@id/et1_rePass"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@id/et1_rePass"
+        app:layout_constraintRight_toRightOf="@id/layout_signUp"
+        app:layout_constraintTop_toTopOf="@id/et1_rePass"
         app:layout_constraintVertical_bias="0.466" />
 </androidx.constraintlayout.widget.ConstraintLayout>
