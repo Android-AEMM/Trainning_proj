@@ -6,72 +6,52 @@
     android:layout_width="match_parent"
     android:background="@drawable/back"
     android:id="@+id/layout_signIn"
-    android:paddingTop="100dp"
+    android:paddingTop="200dp"
     android:layout_height="match_parent"
     tools:context=".SignIn">
-
-    <EditText
-        android:id="@+id/et2_name"
-        android:layout_width="350dp"
-        android:layout_height="70dp"
-        android:layout_margin="9dp"
-        android:background="@drawable/btn_background"
-        android:drawableRight="@drawable/ic_con"
-        android:hint="@string/Name"
-        android:padding="10dp"
-        android:textColorHint="@color/gray700"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@id/et2_mail"
-        app:layout_constraintHorizontal_bias="0.59"
-        app:layout_constraintLeft_toLeftOf="@id/layout_signIn"
-        app:layout_constraintRight_toRightOf="@id/layout_signIn" />
-
     <EditText
         android:id="@+id/et2_mail"
         android:layout_width="350dp"
         android:layout_height="70dp"
         android:background="@drawable/btn_background"
-        android:layout_margin="9dp"
+        android:layout_margin="7dp"
         android:drawableRight="@drawable/ic_email"
         android:textSize="24sp"
         android:padding="10dp"
         android:hint="@string/email"
         app:layout_constraintLeft_toLeftOf="@id/layout_signIn"
         app:layout_constraintRight_toRightOf="@id/layout_signIn"
-        app:layout_constraintBottom_toTopOf="@id/et2_mail"
+        app:layout_constraintTop_toTopOf="@id/layout_signIn"
         android:textColorHint="@color/gray700"/>
-
     <EditText
         android:id="@+id/et2_pass"
         android:layout_width="350dp"
         android:layout_height="70dp"
-        android:layout_margin="9dp"
         android:background="@drawable/btn_background"
+        android:layout_margin="7dp"
 
-        android:hint="@string/pass"
-        android:padding="10dp"
-        android:textColorHint="@color/gray700"
         android:textSize="24sp"
-        app:layout_constraintHorizontal_bias="0.491"
+        android:padding="10dp"
+        android:hint="@string/pass"
         app:layout_constraintLeft_toLeftOf="@id/layout_signIn"
         app:layout_constraintRight_toRightOf="@id/layout_signIn"
-        app:layout_constraintTop_toBottomOf="@id/et2_mail" />
-
+        app:layout_constraintTop_toBottomOf="@id/et2_mail"
+        android:textColorHint="@color/gray700"/>
     <Button
         android:id="@+id/btn2_signIn"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
         android:layout_width="250dp"
         android:layout_height="55dp"
-        android:layout_marginTop="30dp"
-        android:background="#94E1CBCB"
-        android:gravity="center"
         android:text="@string/btn_signin"
         android:textColor="@color/gray900"
         android:textSize="24dp"
         android:textStyle="bold|italic"
-        app:layout_constraintHorizontal_bias="0.565"
+        android:background="#94E1CBCB"
         app:layout_constraintLeft_toLeftOf="@id/layout_signIn"
         app:layout_constraintRight_toRightOf="@id/layout_signIn"
-        app:layout_constraintTop_toBottomOf="@id/et2_pass" />
+        app:layout_constraintTop_toBottomOf="@id/et2_pass"
+        />
 
     <TextView
         android:id="@+id/tv_createAcc"
@@ -92,19 +72,18 @@
         android:id="@+id/btn2_signUp"
         android:layout_width="100dp"
         android:layout_height="70dp"
-        android:layout_marginLeft="160dp"
-        android:layout_marginTop="20dp"
-        android:background="#94E1CBCB"
         android:text="@string/btn_signUp"
-        android:textAllCaps="false"
         android:textColor="@color/gray900"
         android:textSize="24dp"
+        android:layout_marginTop="20dp"
         android:textStyle="bold|italic"
-        app:layout_constraintHorizontal_bias="0.735"
+        android:background="#94E1CBCB"
+        android:textAllCaps="false"
+        android:layout_marginLeft="160dp"
         app:layout_constraintLeft_toLeftOf="@id/layout_signIn"
         app:layout_constraintRight_toRightOf="@id/layout_signIn"
-        app:layout_constraintTop_toBottomOf="@id/tv_createAcc" />
-
+        app:layout_constraintTop_toBottomOf="@id/tv_createAcc"
+        />
     <ImageView
         android:id="@+id/show3"
         android:layout_width="104dp"
