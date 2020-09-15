@@ -51,23 +51,24 @@ android:layout_height="match_parent">
     android:hint="@string/mobile"
     android:textColorHint="@color/gray700"/>
 
-<EditText
-    android:id="@+id/et1_pass"
-    android:layout_width="350dp"
-    android:layout_height="70dp"
-    android:drawableRight="@drawable/ic_visible"
-    android:background="@drawable/btn_background"
-    android:layout_margin="7dp"
+    <EditText
+        android:id="@+id/et1_pass"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:layout_margin="7dp"
+        android:layout_marginTop="4dp"
 
-    android:textSize="24sp"
-    android:padding="10dp"
-    android:hint="@string/pass"
-    app:layout_constraintLeft_toLeftOf="@id/layout_signUp"
-    app:layout_constraintRight_toRightOf="@id/layout_signUp"
-    app:layout_constraintTop_toBottomOf="@id/et1_phone"
-    android:textColorHint="@color/gray700"/>
+        android:background="@drawable/btn_background"
+        android:hint="@string/pass"
+        android:padding="10dp"
+        android:textColorHint="@color/gray700"
+        android:textSize="24sp"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintLeft_toLeftOf="@id/layout_signUp"
+        app:layout_constraintRight_toRightOf="@id/layout_signUp"
+        app:layout_constraintTop_toBottomOf="@id/et1_phone" />
 
-<EditText
+    <EditText
     android:id="@+id/et1_rePass"
     android:layout_width="350dp"
     android:layout_height="70dp"
@@ -98,4 +99,13 @@ android:layout_height="match_parent">
     app:layout_constraintTop_toBottomOf="@id/et1_rePass"
     />
 
+    <ImageView
+        android:id="@+id/show"
+        android:layout_width="104dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_baseline_visibility_24"
+        app:layout_constraintBottom_toBottomOf="@id/et1_pass"
+        app:layout_constraintTop_toTopOf="@id/et1_pass"
+        app:layout_constraintVertical_bias="0.466"
+        tools:layout_editor_absoluteX="304dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
