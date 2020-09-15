@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView show, show2;
     static Boolean check1 = false, check2 = false;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

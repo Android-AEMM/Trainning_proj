@@ -1,0 +1,62 @@
+package com.example.trainning_proj.Home;
+
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+
+import com.example.trainning_proj.R;
+
+import java.util.ArrayList;
+
+public class DataAdapter extends RecyclerView.Adapter<DataAdapter.DataViewHolder> {
+
+    ArrayList<Data> list_data ;
+    Context context ;
+
+    public DataAdapter(Context context, ArrayList<Data> list_data ) {
+        this.list_data = list_data;
+        this.context = context;
+    }
+
+    @NonNull
+    @Override
+    public DataViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(context).inflate(R.layout.card_item, parent, false);
+        return new DataViewHolder(view);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull DataViewHolder holder, int position) {
+        Data data_item = list_data.get(position);
+        holder.txt_name_card_item.setText(data_item.getName());
+        holder.image_card_item.setImageResource(data_item.getImage());
+
+    }
+
+    @Override
+    public int getItemCount() {
+        return list_data.size();
+    }
+
+
+    public static class DataViewHolder extends RecyclerView.ViewHolder{
+
+        ImageView image_card_item;
+        TextView  txt_name_card_item;
+
+        public DataViewHolder(@NonNull View itemView) {
+            super(itemView);
+
+            image_card_item = itemView.findViewById(R.id.image_card_item);
+            txt_name_card_item= itemView.findViewById(R.id.txt_name_card_item);
+        }
+    }
+}
