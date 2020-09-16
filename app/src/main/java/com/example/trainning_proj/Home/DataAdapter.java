@@ -2,6 +2,7 @@ package com.example.trainning_proj.Home;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import com.example.trainning_proj.Place.Place;
 import com.example.trainning_proj.R;
 
 import java.util.ArrayList;
@@ -38,6 +40,17 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.DataViewHolder
         Data data_item = list_data.get(position);
         holder.txt_name_card_item.setText(data_item.getName());
         holder.image_card_item.setImageResource(data_item.getImage());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            Intent intent = new Intent(context, Place.class);
+            @Override
+            public void onClick(View v) {
+
+                context.startActivity(intent);
+            }
+        });
+
+
 
     }
 

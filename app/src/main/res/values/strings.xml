@@ -8,4 +8,7 @@
     <string name="so_Signin">Don\'t have account? Create one now!</string>
     <string name="btn_signin">Sign In</string>
     <string name="btn_signUp">Sign Up</string>
+    <string name="famous_place">Famous place</string>
+    <string name="top_place">Top place</string>
+    <string name="what_you_by_from_egypt">What you by from Egypt?</string>
 </resources>
