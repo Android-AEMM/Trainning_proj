@@ -60,7 +60,7 @@ public class Home extends AppCompatActivity {
     private void set_data_recycle() {
 
         // add item
-        arrayList.add(new Data(R.drawable.ic_launcher_background, "item1", "desc1"));
+        arrayList.add(new Data(R.drawable.backgrond, "Pyramids", "The pyramids of Egypt Giza in Cairo is located on the Giza plateau in the Giza governorate i.e. on the western bank of the Nile River. It includes three pyramids of Khufu, Khafre, and Menkaure which were built around 25 centuries BC and are royal tombs, each of which bears the name of the king who built it and who was buried in it and the building The hierarchy here is the stage of development of tomb architecture in ancient Egypt. The pyramids are one of the most important places of tourism in Egypt The three pyramids of Egypt are characterized as one of the most important seven wonders of the world, one of the largest gases, ancient and modern history, and the most important tourist places in Cairo","Giza"));
         arrayList.add(new Data(R.drawable.ic_launcher_background, "item2", "desc2"));
         arrayList.add(new Data(R.drawable.ic_launcher_background, "item3", "desc3"));
         arrayList.add(new Data(R.drawable.ic_launcher_background, "item1", "desc1"));

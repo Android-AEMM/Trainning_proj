@@ -37,7 +37,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.DataViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull DataViewHolder holder, int position) {
-        Data data_item = list_data.get(position);
+        final Data data_item = list_data.get(position);
         holder.txt_name_card_item.setText(data_item.getName());
         holder.image_card_item.setImageResource(data_item.getImage());
 
@@ -45,6 +45,12 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.DataViewHolder
             Intent intent = new Intent(context, Place.class);
             @Override
             public void onClick(View v) {
+
+                intent.putExtra("name", data_item.getName());
+                intent.putExtra("desc", data_item.getDesc());
+                intent.putExtra("image", data_item.getImage());
+                intent.putExtra("address", data_item.getAddress());
+
 
                 context.startActivity(intent);
             }

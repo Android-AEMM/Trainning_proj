@@ -11,4 +11,7 @@
     <string name="famous_place">Famous place</string>
     <string name="top_place">Top place</string>
     <string name="what_you_by_from_egypt">What you by from Egypt?</string>
+    <string name="place_name">Place_name</string>
+    <string name="addres">Address</string>
+    <string name="description">Description</string>
 </resources>
