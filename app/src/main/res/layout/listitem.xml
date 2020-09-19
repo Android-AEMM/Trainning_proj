@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#F6E8E8"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/list_item"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:textColor="@color/gray900"
+        android:textStyle="bold|italic"
+        android:background="@drawable/itemlist_back"
+        android:textSize="24sp"/>
+
+</LinearLayout>
