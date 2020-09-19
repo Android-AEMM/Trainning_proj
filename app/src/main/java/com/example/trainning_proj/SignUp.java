@@ -1,16 +1,14 @@
 package com.example.trainning_proj;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-public class MainActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class SignUp extends AppCompatActivity {
     EditText et1_pass, et1_repass;
     ImageView show, show2;
     static Boolean check1 = false, check2 = false;
@@ -19,7 +17,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_signup);
+
         et1_pass = findViewById(R.id.et1_pass);
         et1_repass = findViewById(R.id.et1_rePass);
         show = findViewById(R.id.show);

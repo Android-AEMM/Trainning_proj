@@ -1,7 +1,5 @@
 package com.example.trainning_proj;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
@@ -9,7 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.trainning_proj.Home.Home;
 
@@ -24,6 +23,7 @@ public class SignIn extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
+
         et2_pass = findViewById(R.id.et2_pass);
         btn_login = findViewById(R.id.btn2_signIn);
         btn_signUp = findViewById(R.id.btn2_signUp);
@@ -42,7 +42,7 @@ public class SignIn extends AppCompatActivity {
         btn_signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent2 = new Intent(SignIn.this, MainActivity.class);
+                intent2 = new Intent(SignIn.this, SignUp.class);
                 startActivity(intent2);
                 finish();
             }
