@@ -16,6 +16,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.trainning_proj.Exchange_Rates;
 import com.example.trainning_proj.R;
 import com.example.trainning_proj.Setting.Setting;
 import com.google.android.material.navigation.NavigationView;
@@ -95,7 +96,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             }
             case R.id.menu_currency:
             {
-                Toast.makeText(this, "A", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(Home.this, Exchange_Rates.class));
                 break;
             }
             case R.id.menu_logOut:

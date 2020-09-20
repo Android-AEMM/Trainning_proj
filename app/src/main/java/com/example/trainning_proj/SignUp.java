@@ -2,15 +2,20 @@ package com.example.trainning_proj;
 
 import android.os.Bundle;
 import android.text.InputType;
+import android.text.TextUtils;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SignUp extends AppCompatActivity {
-    EditText et1_pass, et1_repass;
+
+    EditText et1_pass, et1_repass, et1_name, et1_mail, et1_phone;
     ImageView show, show2;
+    Button btn_signUp;
     static Boolean check1 = false, check2 = false;
 
 
@@ -18,10 +23,18 @@ public class SignUp extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
-
+        et1_phone=findViewById(R.id.et1_phone);
+        et1_name=findViewById(R.id.et1_name);
+        et1_mail=findViewById(R.id.et1_mail);
         et1_pass = findViewById(R.id.et1_pass);
         et1_repass = findViewById(R.id.et1_rePass);
         show = findViewById(R.id.show);
+        show2 = findViewById(R.id.show2);
+
+        btn_signUp=findViewById(R.id.btn_signUp);
+
+
+
         show.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -38,7 +51,8 @@ public class SignUp extends AppCompatActivity {
                 }
             }
         });
-        show2 = findViewById(R.id.show2);
+
+
         show2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,6 +70,28 @@ public class SignUp extends AppCompatActivity {
                 }
             }
         });
+
+        btn_signUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String email =et1_mail.getText().toString();
+                String name =et1_name.getText().toString();
+                String repassword =et1_repass.getText().toString();
+                String phone =et1_phone.getText().toString();
+                String password =et1_pass.getText().toString();
+
+                if(TextUtils.isEmpty(name)||TextUtils.isEmpty(email)||TextUtils.isEmpty(phone)||TextUtils.isEmpty(password)||TextUtils.isEmpty(repassword))
+                {
+                    Toast.makeText(SignUp.this, "There's an empty field!", Toast.LENGTH_LONG).show();
+                }
+                if (TextUtils.equals(password,repassword))
+                {
+                    Toast.makeText(SignUp.this, "The password don't match ", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
+
 
 
     }
