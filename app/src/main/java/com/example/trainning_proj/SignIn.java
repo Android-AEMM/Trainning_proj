@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.text.InputType;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -20,6 +22,7 @@ public class SignIn extends AppCompatActivity {
     ImageView show;
     static Boolean check1 = false;
     Intent intent1 ,intent2;
+    Animation animation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,10 +33,16 @@ public class SignIn extends AppCompatActivity {
         btn_login = findViewById(R.id.btn2_signIn);
         btn_signUp = findViewById(R.id.btn2_signUp);
 
+        animation = AnimationUtils.loadAnimation(SignIn.this, R.anim.blink_anim);
+
         /// go to home activity
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                btn_login.startAnimation(animation);
+
+
                 intent1 = new Intent(SignIn.this, Home.class);
                 startActivity(intent1);
                 finish();
@@ -51,6 +60,9 @@ public class SignIn extends AppCompatActivity {
         btn_signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                btn_signUp.startAnimation(animation);
+
                 intent2 = new Intent(SignIn.this, SignUp.class);
                 startActivity(intent2);
                 finish();

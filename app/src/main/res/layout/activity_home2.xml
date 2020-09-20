@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/layout_drawer"
-    android:background="#FBF2E4"
+    android:background="@color/white"
     tools:openDrawer="start"
     android:fitsSystemWindows="true"
     tools:context=".Home.Home">
@@ -26,12 +26,13 @@
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
+                android:layout_marginTop="50dp"
                 android:scaleX="2"
-                android:src="@drawable/background"
+                android:src="@drawable/backhome"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="@id/toolBAr"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0" />
 
@@ -53,7 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:id="@+id/toolBAr"
-                android:background="@color/gray400"
+                android:background="@color/blue"
                 android:elevation="4dp"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -71,7 +72,8 @@
 
         <ScrollView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp">
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -82,6 +84,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/famous_place"
+                    android:textColor="@color/blue"
+                    android:textSize="20dp"
+                    android:layout_marginTop="2dp"
+
                     />
 
 
@@ -97,6 +103,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/top_place"
+                    android:textColor="@color/blue"
+                    android:textSize="20dp"
+                    android:layout_marginTop="2dp"
+
                     />
 
                 <androidx.recyclerview.widget.RecyclerView
@@ -110,6 +120,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/what_you_by_from_egypt"
+                    android:textColor="@color/blue"
+                    android:textSize="20dp"
+                    android:layout_marginTop="2dp"
                     />
 
                 <androidx.recyclerview.widget.RecyclerView

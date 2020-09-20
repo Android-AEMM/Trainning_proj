@@ -19,7 +19,7 @@ import androidx.loader.content.Loader;
 
 import java.util.ArrayList;
 
-public class Exchange_Rates extends AppCompatActivity implements LoaderManager.LoaderCallbacks<ArrayList<String>>{
+public class Exchange_Rates extends AppCompatActivity implements LoaderManager.LoaderCallbacks<ArrayList<String>> {
 
      ListView lv;
 

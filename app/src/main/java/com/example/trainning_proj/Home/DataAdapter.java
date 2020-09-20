@@ -28,6 +28,9 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.DataViewHolder
         this.context = context;
     }
 
+    public DataAdapter(Home context, ArrayList<DataProduct> arrayList_product) {
+    }
+
     @NonNull
     @Override
     public DataViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -38,6 +41,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.DataViewHolder
     @Override
     public void onBindViewHolder(@NonNull DataViewHolder holder, int position) {
         final Data data_item = list_data.get(position);
+
         holder.txt_name_card_item.setText(data_item.getName());
         holder.image_card_item.setImageResource(data_item.getImage());
 

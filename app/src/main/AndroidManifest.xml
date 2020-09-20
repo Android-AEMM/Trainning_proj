@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Setting.Setting"></activity>
+        <activity android:name=".Product.Product_buy"></activity>
+        <activity android:name=".Setting.Setting" />
         <activity android:name=".Place.Place" />
         <activity android:name=".Home.Home" />
-        <activity android:name=".Exchange_Rates"/>
+        <activity android:name=".Exchange_Rates" />
         <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,6 +29,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".SignUp" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

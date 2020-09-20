@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 public class Place extends AppCompatActivity {
 
-    TextView name ,address ,desc;
+    TextView name ,address ,desc,titel;
     ImageView image,location;
     String name_location;
     @Override
@@ -28,9 +28,12 @@ public class Place extends AppCompatActivity {
         desc = findViewById(R.id.txt2_place_desc);
         image = findViewById(R.id.image2_place);
         location = findViewById(R.id.image_location);
+        titel = findViewById(R.id.titel);
 
+
+        titel.setText(getIntent().getStringExtra("name"));
         name.setText(getIntent().getStringExtra("name"));
-        address.setText(getIntent().getStringExtra("address-+"));
+        address.setText(getIntent().getStringExtra("address"));
         desc.setText(getIntent().getStringExtra("desc"));
         image.setImageResource( getIntent().getIntExtra("image",1));
 
