@@ -54,6 +54,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.DataViewHolder
                 intent.putExtra("desc", data_item.getDesc());
                 intent.putExtra("image", data_item.getImage());
                 intent.putExtra("address", data_item.getAddress());
+                intent.putExtra("location", data_item.getLocation());
 
 
                 context.startActivity(intent);

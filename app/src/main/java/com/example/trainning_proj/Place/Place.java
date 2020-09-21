@@ -2,7 +2,10 @@ package com.example.trainning_proj.Place;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -31,11 +34,22 @@ public class Place extends AppCompatActivity {
         titel = findViewById(R.id.titel);
 
 
+        name_location = getIntent().getStringExtra("location");
+
         titel.setText(getIntent().getStringExtra("name"));
         name.setText(getIntent().getStringExtra("name"));
         address.setText(getIntent().getStringExtra("address"));
         desc.setText(getIntent().getStringExtra("desc"));
         image.setImageResource( getIntent().getIntExtra("image",1));
+
+        location.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(name_location));
+                startActivity(intent);
+            }
+        });
+
 
     }
 }

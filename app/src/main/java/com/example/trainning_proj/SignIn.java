@@ -43,7 +43,10 @@ public class SignIn extends AppCompatActivity {
         forget_pass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(SignIn.this, "فالح..ماكنت كتبتها ف اي مكان بدل ماتقرفنا معاك :)", Toast.LENGTH_SHORT).show();
+              //  Toast.makeText(SignIn.this, "فالح..ماكنت كتبتها ف اي مكان بدل ماتقرفنا معاك :)", Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(SignIn.this, Forget_password.class);
+                startActivity(intent);
             }
         });
 
