@@ -4,7 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="10dp"
-    android:layout_margin="12dp"
+    android:text="gjhghjghjgj"
+
+    android:layout_margin="10dp"
     android:textSize="20sp"
-    android:textStyle="italic"
+    android:background="@drawable/bord"
     android:textColor="@color/gray900"/>

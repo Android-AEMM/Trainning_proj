@@ -194,13 +194,52 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
 
 
-        arrayList_product.add(new DataProduct(R.drawable.backgrond,"product1","10"));
-        arrayList_product.add(new DataProduct(R.drawable.backgrond,"product2","10"));
-        arrayList_product.add(new DataProduct(R.drawable.backgrond,"product3","10"));
-        arrayList_product.add(new DataProduct(R.drawable.backgrond,"product1","10"));
-        arrayList_product.add(new DataProduct(R.drawable.backgrond,"product1","10"));
-        arrayList_product.add(new DataProduct(R.drawable.backgrond,"product1","10"));
-        arrayList_product.add(new DataProduct(R.drawable.backgrond,"product1","10","jfgjgjhgjhghg"));
+
+        arrayList_product.add(new DataProduct(R.drawable.bastet,"Bastet, Antique Stones, and Statues Replicas" ,
+                "Small blue scarab stone: 7~15 pounds\n" +
+                        "Medium Bastet statue \"about 25cm tall: 50 ~ 250 pounds (depending on material [plastic-granite-alabaster] used)\n" +
+                        "Large statue \"about 45cm\": 80 ~ 400 pounds (depending on material [plastic-granite-alabaster-wood], size and fine details applied)",
+                "As ancient Egyptians worshiped and honored many gods and goddess, they built huge temples and great statues. One of the most interesting and emblematic ones is Bastet - the feline goddess, protector of Lower Egypt. Until now, in the City of Bastet «Tal El Basta» were found and still exist near 300,000 mummified cats. With a head of a cat and the body of a woman, Bastet is believed to protect homes from evil and vermin. Another famous Egyptian icon is the Scarab beetle. The little blue ones resemble creation and resurrection, as the beetle seemed to come out of nowhere, out of mud. The Scarab is also the symbol of the Great «Ra», the deity and leader of all Egyptian Gods who created himself out of nothing.\",\"Small blue scarab stone: 7~15 pounds\\n"));
+
+        arrayList_product.add(new DataProduct(R.drawable.papyrus," Papyrus Manuscripts and Paintings “Replica”","Small ~30cm color printed: 20 ~ 25 pounds\n" +
+                "Hand-painted ~ 30cm: 50~150 pounds\n" +
+                "Hand-painted ~1m/1.5m: 350 ~ 1200 pounds\n" +
+                "There are some famous artist signed paintings that sell for a lot more.",
+                "\"Explore the past via this purely-Egyptian paper, made of Papyrus plants cultivated in the river Nile's delta. Egyptians kept their secrets and stories in writings and paintings on this paper, which is largely credited for their exceptional survival throughout the centuries gone by. Note that all papyrus papers are hand-made. Readily available in Cairo's markets, original paintings and manuscripts by famous artists can turn out to be very expensive. For smaller pockets, there are machine-stamped papyrus manuscripts and paintings, which are equally beautiful looking and lasting. The choice of works available on papyrus paper is vast, from from ancient Egyptian paintings and temple drawings and manuscripts, to modern art and Arabic typography.\""));
+
+        arrayList_product.add(new DataProduct(R.drawable.tarboosh,"Fez “Tarboosh”","Prices range from 20 to 80 pounds for an original fez. Cheaper models are not recommended as they usually have carton paper instead of a wicker, are made from a different fabric and won’t last for too long. Find a perfectly-sized fez in Moez street."
+                ,"The fez used to be a formal hat for citizens and Pashas, made of soft and durable Kilim fabric. This fashionable headgear was worn in Egypt from 1805 till 1952, but now is rarely to be found. The Egyptian Fez almost disappeared with the end of the Mohamed Ali’s family monarchy after the revolution in 1952. The Egyptian version is a little bit taller than the ones used in north African countries like Tunisia and Morocco, with a more recognizable cylinder shape.\n" +
+                "Afterward, the Fez is carefully ironed and a tassel is attached.\n" +
+                "\n"));
+        arrayList_product.add(new DataProduct(R.drawable.twabel,"Incense","Incense sticks (a box containing about 10 sticks): 5 ~ 10 Egyptian pounds\n" +
+                "Local Incense powder: ~10 Egyptian pounds per 200 grams\n" +
+                "Original Oud powder (mixed): ~100 Egyptian pounds per 50 grams",
+                "Bring the Middle Eastern fragrance to your home, just by burning some Oud mixed powder. Your house and your heart will be filled with a warm oriental feeling, like the one embracing Cairo's narrow streets and markets.\n" +
+                        "Only trees infected «with some sort of mold» would produce the dark aromatic resin, that is processed into Oud. The raw materials are imported from countries of the Far East like India or Indonesia. Agar Wood is Egyptians' favorite fragrance, even though it is as pricey as it is pleasant. The other type is Bokhor «Incense sticks», available everywhere, from perfumery stores to supermarkets. It is of course a lot cheaper as it is made of regular wood mix soaked in fragrances or oils. These incenses are available in many shapes and varieties to fit different beautifully crafted censers.\n"));
+
+        arrayList_product.add(new DataProduct(R.drawable.kilim_carpets,"Kilim Carpets","A small woolen Kilim ~50cm piece: 25~80 pounds\n" +
+                "Larger pieces vary between 1m ~ 3.5m: 150~1200 pounds\n" +
+                "Prices vary depending on actual size, materials used, design and stitch size",
+                "Kilim art is one of the earliest wool spinning crafts in Egypt, obtained by shaping rugs and table covers using wool, cotton, and silk to create fabulous décor pieces. The Kilim carpets are made entirely of natural, environment-friendly materials and organic chemical-free colors, hand-made using a wooden loom. Kilim can be utilized in many ways. Kilim carpets have a soft woolen texture, decorated in vivid colors mostly obtained from onion peels for browns, hibiscus flower for reds, and parsley for greens.\n"));
+
+        arrayList_product.add(new DataProduct(R.drawable.khayameya,"Khayameya","Around 1 square meter (printed) piece : 35 ~ 45 pounds\n" +
+                "Original pieces (painted or mixed fabrics): around 80 ~ 150 pounds for the same size depends on design and details.",
+                "Egyptian Tent Textile decoration craft is a unique art, which started in the Pharaohic era and flourished after the Islamic conquest. Khayameya is a fine decorative textile, famous for its durability as it is made of thick Tiel «Kenaf» cloth. Khayameya artisans used to be chosen by the community sheikh of khayameya after examining the artisans' artwork, as a guarantee of quality and skill. Nowadays it is used to decorate people's houses, wedding parties as well as funerals. Give an original oriental touch to your own home by purchasing a colorful Khayameya cloth or buy it as cushion cover, table runner or wall hanging."));
+
+        arrayList_product.add(new DataProduct(R.drawable.egyptian_musical_instruments,"Egyptian Musical Instruments","Small Nai : ~45 pounds\n" +
+                "Oud : 300 ~700 (depends on wood used and decorations applied)\n" +
+                "Duff: ~ 45 pounds\n" +
+                "Small wooden Darbuka: ~15 pounds, large ~ 50 pounds\n" +
+                "Metal professional Darbouka: 200~700 pounds (depends on size, brand, materials used, decorations)",
+                "«Thousands of years ago the God Thoth created music to help Osiris bring peace and civilize the world» the ancient Egyptians believed. Drawings inside tombs show musicians playing various instruments like flutes, harps, lutes, and percussion instruments in many events and occasions, as well as prayers. Now talking about the instruments themselves, let's start with the Nai, which is a light-weighted instrument producing faint, touching sad sounds. Keep in mind it is a true art to play this instrument, regarded by many as simply too difficult. A professional darbuka is usually quite heavy as it is made out of metal, while an amateur one is usually made of wood, being much lighter and cheaper. The Duff is also quite popular, the advantages being that it is easy to carry and play.\n" +
+                        "\n"));
+
+        arrayList_product.add(new DataProduct(R.drawable.eastern_desserts,"Eastern Desserts\n","One kilogram : 35 ~ 150 pounds (depends on amount of nuts and type of oils used)\n",
+                "Time to indulge your senses with the sweet taste of the East? Baklava will get you addicted, while the Saraya pie is believed to connect the loved ones together. In the Egyptian culture, dessert is an important part of everyday meal, although it is usually served at lunch time, accompanied by red tea. It is customary to bring desserts when visiting each other houses.\n" +
+                        "\n" +
+                        "- Saraya Pie: special toasted bread pie sweetened by Caramel «burnt sugar» and served with cream.\n" +
+                        "- Basbosa: made of Smeed «corn flour» with sugar and oil, almonds or walnuts can be added, stuffed with cream or blank.\n" +
+                        "- Semsemia: crunchy sesame seeds with sugar syrup and rose water.\n"));
 
 
 
