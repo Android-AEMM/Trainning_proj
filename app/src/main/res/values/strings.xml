@@ -22,4 +22,5 @@
     <string name="price">Price</string>
     <string name="abo_elhole">Sphinx</string>
     <string name="confirm">Confirm</string>
+    <string name="old_pass">Old Password</string>
 </resources>
