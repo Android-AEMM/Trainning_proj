@@ -10,6 +10,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,12 +18,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.trainning_proj.Home.Home;
 
 public class SignIn extends AppCompatActivity {
-    Button btn_login,btn_signUp;
-    EditText et2_pass,et2_mail;
+    Button btn_login, btn_signUp;
+    EditText et2_pass, et2_mail;
     ImageView show;
     static Boolean check1 = false;
-    Intent intent1 ,intent2;
+    Intent intent1, intent2;
     Animation animation;
+    TextView forget_pass;
+   // DataBaseHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,27 +35,43 @@ public class SignIn extends AppCompatActivity {
         et2_pass = findViewById(R.id.et2_pass);
         btn_login = findViewById(R.id.btn2_signIn);
         btn_signUp = findViewById(R.id.btn2_signUp);
+        forget_pass = findViewById(R.id.tv2_forgot_pass);
 
         animation = AnimationUtils.loadAnimation(SignIn.this, R.anim.blink_anim);
+      //  db = new DataBaseHelper(this);
+
+        forget_pass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(SignIn.this, "فالح..ماكنت كتبتها ف اي مكان بدل ماتقرفنا معاك :)", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         /// go to home activity
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                btn_login.startAnimation(animation);
-
-
+               btn_login.startAnimation(animation);
                 intent1 = new Intent(SignIn.this, Home.class);
                 startActivity(intent1);
                 finish();
-                String email =et2_mail.getText().toString();
-                String password =et2_pass.getText().toString();
+               //String email = et2_mail.getText().toString();
+              //  String password = et2_pass.getText().toString();
 
-                if(TextUtils.isEmpty(email)||TextUtils.isEmpty(password))
-                {
+              /*  if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
                     Toast.makeText(SignIn.this, "Email OR password field is empty!", Toast.LENGTH_LONG).show();
-                }
+                    return;
+                }*/
+
+               /* int check = db.isLoginUser(email,password);
+                if (check > 0) {
+                    Toast.makeText(SignIn.this, "Login Successful" , Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(SignIn.this, Home.class);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(SignIn.this, "Login Faild", Toast.LENGTH_SHORT).show();
+                }*/
             }
         });
 

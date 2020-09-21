@@ -37,20 +37,34 @@
         app:layout_constraintRight_toRightOf="@id/layout_signIn"
         app:layout_constraintTop_toBottomOf="@id/et2_mail"
         android:textColorHint="@color/gray700"/>
+    <TextView
+        android:id="@+id/tv2_forgot_pass"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="230dp"
+        android:textColor="@color/gray900"
+        app:layout_constraintLeft_toLeftOf="@id/layout_signIn"
+        app:layout_constraintRight_toRightOf="@id/layout_signIn"
+        app:layout_constraintTop_toBottomOf="@id/et2_pass"
+        app:layout_constraintBottom_toTopOf="@id/btn2_signIn"
+        android:text="Forgot Password?"/>
     <Button
         android:id="@+id/btn2_signIn"
         android:layout_marginTop="30dp"
         android:gravity="center"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
+        android:layout_width="250dp"
+        android:layout_height="55dp"
         android:text="@string/btn_signin"
         android:textColor="@color/gray900"
-        android:textSize="20dp"
+        android:textSize="24dp"
         android:textStyle="bold|italic"
-        android:background="#94E1CBCB"
+        android:background="#8DFFF8E1"
         app:layout_constraintLeft_toLeftOf="@id/layout_signIn"
         app:layout_constraintRight_toRightOf="@id/layout_signIn"
-        app:layout_constraintTop_toBottomOf="@id/et2_pass"
+        app:layout_constraintBottom_toTopOf="@id/tv_createAcc"
         />
 
     <TextView

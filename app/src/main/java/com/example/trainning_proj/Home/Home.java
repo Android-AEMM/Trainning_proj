@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.trainning_proj.Exchange_Rates;
 import com.example.trainning_proj.R;
 import com.example.trainning_proj.Setting.Setting;
+import com.example.trainning_proj.SignIn;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
@@ -106,8 +107,8 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             }
             case R.id.menu_logOut:
             {
-                Toast.makeText(getApplicationContext(),"Logging Out..  ",Toast.LENGTH_LONG).show();
-                break;
+                Intent intent = new Intent(Home.this, SignIn.class);
+                startActivity(intent);
             }
         }
 
