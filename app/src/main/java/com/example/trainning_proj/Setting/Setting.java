@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -25,6 +27,7 @@ public class Setting extends AppCompatActivity {
     EditText edt_old_pass, edt_current_pass, edt_current_repass, edt_mail;
     ImageView show_old_pass, show_current_pass, show_current_repass;
     Button btn_confirm;
+    Animation animation;
 
     //DataBaseHelper db;
     static Boolean check1 = false, check2 = false;
@@ -37,6 +40,8 @@ public class Setting extends AppCompatActivity {
         //  edt_old_pass=findViewById(R.id.et1_old_pass);
         // show_old_pass = findViewById(R.id.show2_old_pass);
         //  edt_mail=findViewById(R.id.et1_mail_change);
+
+        animation = AnimationUtils.loadAnimation(Setting.this, R.anim.blink_anim);
 
 
         edt_mail = findViewById(R.id.et1_mail_change);
@@ -94,6 +99,8 @@ public class Setting extends AppCompatActivity {
         btn_confirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                btn_confirm.startAnimation(animation);
 
                 String email = edt_mail.getText().toString().trim();
                 String new_pass = edt_current_pass.getText().toString().trim();

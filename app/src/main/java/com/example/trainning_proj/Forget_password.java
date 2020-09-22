@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.text.InputType;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -20,6 +22,7 @@ public class Forget_password extends AppCompatActivity {
     ImageView show, show2;
     Button btn_confirm;
     static Boolean check1 = false, check2 = false;
+    Animation animation;
     // DataBaseHelper db;
 
     @Override
@@ -32,9 +35,14 @@ public class Forget_password extends AppCompatActivity {
         btn_confirm = findViewById(R.id.btn_confirm);
         // db = new DataBaseHelper(this);
 
+        animation = AnimationUtils.loadAnimation(Forget_password.this, R.anim.blink_anim);
+
+
         btn_confirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                btn_confirm.startAnimation(animation);
+
                 String email = et1_mail.getText().toString();
                 // String name = et1_name.getText().toString();
                 String phone = et1_phone.getText().toString();

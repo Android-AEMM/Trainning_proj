@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.text.InputType;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -20,6 +22,8 @@ public class SignUp extends AppCompatActivity {
     ImageView show, show2;
     Button btn_signUp;
     static Boolean check1 = false, check2 = false;
+    Animation animation;
+
     // DataBaseHelper db;
 
 
@@ -36,6 +40,9 @@ public class SignUp extends AppCompatActivity {
         show2 = findViewById(R.id.show2);
         btn_signUp = findViewById(R.id.btn_signUp);
         //  db = new DataBaseHelper(this);
+
+        animation = AnimationUtils.loadAnimation(SignUp.this, R.anim.blink_anim);
+
 
 
         show.setOnClickListener(new View.OnClickListener() {
@@ -77,6 +84,9 @@ public class SignUp extends AppCompatActivity {
         btn_signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                btn_signUp.startAnimation(animation);
+
                 String email = et1_mail.getText().toString();
                 String name = et1_name.getText().toString();
                 String repassword = et1_repass.getText().toString();

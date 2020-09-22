@@ -39,33 +39,38 @@
         android:textColorHint="@color/gray700"/>
     <TextView
         android:id="@+id/tv2_forgot_pass"
-        android:layout_width="300dp"
-        android:layout_height="70dp"
-        android:textSize="26sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
         android:textStyle="bold"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="230dp"
-        android:textColor="@color/gray900"
+        android:textColor="@color/blue"
         app:layout_constraintLeft_toLeftOf="@id/layout_signIn"
         app:layout_constraintRight_toRightOf="@id/layout_signIn"
         app:layout_constraintTop_toBottomOf="@id/et2_pass"
         app:layout_constraintBottom_toTopOf="@id/btn2_signIn"
         android:text="Forgot Password?"/>
+
     <Button
         android:id="@+id/btn2_signIn"
-        android:layout_marginTop="30dp"
-        android:gravity="center"
         android:layout_width="250dp"
         android:layout_height="55dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/btn_background"
+        android:fontFamily="@font/alegreya_italic"
+        android:gravity="center"
         android:text="@string/btn_signin"
-        android:textColor="@color/gray900"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
         android:textSize="24dp"
         android:textStyle="bold|italic"
-        android:background="#8DFFF8E1"
+        app:layout_constraintBottom_toTopOf="@id/tv_createAcc"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintLeft_toLeftOf="@id/layout_signIn"
         app:layout_constraintRight_toRightOf="@id/layout_signIn"
-        app:layout_constraintBottom_toTopOf="@id/tv_createAcc"
-        />
+        app:layout_constraintTop_toBottomOf="@id/tv2_forgot_pass" />
 
     <TextView
         android:id="@+id/tv_createAcc"
@@ -75,7 +80,7 @@
         android:gravity="center"
         android:text="@string/so_Signin"
         android:textColor="@color/gray900"
-        android:textSize="22sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintLeft_toLeftOf="@id/layout_signIn"
@@ -84,20 +89,22 @@
 
     <Button
         android:id="@+id/btn2_signUp"
-        android:layout_width="80dp"
-        android:layout_height="50dp"
-        android:text="@string/btn_signUp"
-        android:textColor="@color/gray900"
-        android:textSize="20dp"
-        android:layout_marginTop="20dp"
-        android:textStyle="bold|italic"
-        android:background="#94E1CBCB"
-        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="140dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/btn_background"
+        android:fontFamily="@font/alegreya_italic"
+        android:text="@string/btn_signUp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintHorizontal_bias="0.836"
         app:layout_constraintLeft_toLeftOf="@id/layout_signIn"
         app:layout_constraintRight_toRightOf="@id/layout_signIn"
-        app:layout_constraintTop_toBottomOf="@id/tv_createAcc"
-        />
+        app:layout_constraintTop_toBottomOf="@id/tv_createAcc" />
+
     <ImageView
         android:id="@+id/show3"
         android:layout_width="104dp"
