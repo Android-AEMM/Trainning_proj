@@ -21,6 +21,16 @@
             android:title="Log Out"/>
 
     </group>
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/menu_info"
+                android:title="App Info"
+                android:icon="@drawable/ic_baseline_info_24"/>
+        </menu>
+
+    </item>
+
 
 
 </menu>

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Forget_password"></activity>
+        <activity android:name=".App_info"></activity>
+        <activity android:name=".Forget_password" />
         <activity android:name=".Product.Product_buy" />
         <activity android:name=".Setting.Setting" />
         <activity android:name=".Place.Place" />

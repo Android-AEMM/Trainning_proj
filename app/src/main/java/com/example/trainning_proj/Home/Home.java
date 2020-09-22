@@ -16,6 +16,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.trainning_proj.App_info;
 import com.example.trainning_proj.Exchange_Rates;
 import com.example.trainning_proj.R;
 import com.example.trainning_proj.Setting.Setting;
@@ -109,6 +110,11 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             {
                 Intent intent = new Intent(Home.this, SignIn.class);
                 startActivity(intent);
+            }
+            case R.id.menu_info:
+            {
+
+                startActivity(new Intent(Home.this, App_info.class));
             }
         }
 

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="176dp"
     android:orientation="vertical"
-    android:background="#F6F2D1"
+    android:background="#85EBE7FA"
     android:gravity="bottom"
     android:theme="@style/ThemeOverlay.AppCompat.Dark"
     android:padding="15dp" >
@@ -12,7 +12,7 @@
         android:layout_width="70dp"
         android:layout_height="60dp"
         android:layout_marginBottom="10dp"
-        android:src="@drawable/speaker"/>
+        android:src="@drawable/logo2"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
