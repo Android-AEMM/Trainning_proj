@@ -25,11 +25,11 @@
         android:textColorHint="@color/gray700"/>
     <EditText
         android:id="@+id/et2_pass"
+        android:inputType="textPassword"
         android:layout_width="280dp"
         android:layout_height="55dp"
         android:background="@drawable/edt_background"
         android:layout_margin="7dp"
-
         android:textSize="20sp"
         android:padding="8dp"
         android:hint="@string/pass"

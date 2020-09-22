@@ -30,27 +30,17 @@ public class Exchange_Rates extends AppCompatActivity implements LoaderManager.L
     private static String CURRENCY_URL = "https://jsonware.com/json/6b73abddc0812d1ef8e3632f5d79c6c2.json";
 
 
-
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exchange__rates);
 
         lv=findViewById(R.id.listView);
-
         item=findViewById(R.id.list_item);
         progressBar = findViewById(R.id.pb_progress);
 
 
         LoaderManager loaderManager = getSupportLoaderManager();
         loaderManager.initLoader(0, null, Exchange_Rates.this).forceLoad();
-
-
-
-
-
-
-
 
     }
 

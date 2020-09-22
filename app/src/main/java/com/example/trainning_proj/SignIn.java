@@ -25,7 +25,7 @@ public class SignIn extends AppCompatActivity {
     Intent intent1, intent2;
     Animation animation;
     TextView forget_pass;
-   // DataBaseHelper db;
+    // DataBaseHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,12 +38,12 @@ public class SignIn extends AppCompatActivity {
         forget_pass = findViewById(R.id.tv2_forgot_pass);
 
         animation = AnimationUtils.loadAnimation(SignIn.this, R.anim.blink_anim);
-      //  db = new DataBaseHelper(this);
+        // db = new DataBaseHelper(this);
 
         forget_pass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-              //  Toast.makeText(SignIn.this, "فالح..ماكنت كتبتها ف اي مكان بدل ماتقرفنا معاك :)", Toast.LENGTH_SHORT).show();
+                //  Toast.makeText(SignIn.this, "فالح..ماكنت كتبتها ف اي مكان بدل ماتقرفنا معاك :)", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(SignIn.this, Forget_password.class);
                 startActivity(intent);
@@ -55,22 +55,23 @@ public class SignIn extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-               btn_login.startAnimation(animation);
+                btn_login.startAnimation(animation);
                 intent1 = new Intent(SignIn.this, Home.class);
                 startActivity(intent1);
                 finish();
-               //String email = et2_mail.getText().toString();
-              //  String password = et2_pass.getText().toString();
+             /*  String email = et2_mail.getText().toString();
+              String password = et2_pass.getText().toString();
 
-              /*  if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
+               if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
                     Toast.makeText(SignIn.this, "Email OR password field is empty!", Toast.LENGTH_LONG).show();
                     return;
-                }*/
+                }
 
-               /* int check = db.isLoginUser(email,password);
+               int check = db.isLoginUser(email,password);
                 if (check > 0) {
                     Toast.makeText(SignIn.this, "Login Successful" , Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(SignIn.this, Home.class);
+                    intent.putExtra("email",email);
                     startActivity(intent);
                 } else {
                     Toast.makeText(SignIn.this, "Login Faild", Toast.LENGTH_SHORT).show();

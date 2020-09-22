@@ -23,20 +23,6 @@
         app:layout_constraintRight_toRightOf="@id/layout_change_pass"
         app:layout_constraintTop_toTopOf="@id/layout_change_pass" />
 
-    <EditText
-        android:id="@+id/et1_old_pass"
-        android:layout_width="350dp"
-        android:layout_height="70dp"
-        android:layout_margin="7dp"
-        android:background="@drawable/edt_background"
-
-        android:hint="@string/old_pass"
-        android:padding="10dp"
-        android:textColorHint="@color/gray700"
-        android:textSize="24sp"
-        app:layout_constraintLeft_toLeftOf="@id/layout_change_pass"
-        app:layout_constraintRight_toRightOf="@id/layout_change_pass"
-        app:layout_constraintTop_toBottomOf="@id/et1_mail_change" />
 
 
     <EditText
@@ -55,7 +41,7 @@
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintLeft_toLeftOf="@id/layout_change_pass"
         app:layout_constraintRight_toRightOf="@id/layout_change_pass"
-        app:layout_constraintTop_toBottomOf="@id/et1_old_pass" />
+        app:layout_constraintTop_toBottomOf="@id/et1_mail_change" />
 
     <EditText
         android:id="@+id/et1_rePass_change"
@@ -114,16 +100,5 @@
         app:layout_constraintTop_toTopOf="@id/et1_pass_change"
         app:layout_constraintVertical_bias="0.466" />
 
-    <ImageView
-        android:id="@+id/show2_old_pass"
-        android:layout_width="104dp"
-        android:layout_height="40dp"
-        android:layout_marginLeft="272dp"
-        android:src="@drawable/ic_baseline_visibility_24"
-        app:layout_constraintBottom_toBottomOf="@id/et1_rePass_change"
-        app:layout_constraintHorizontal_bias="0.038"
-        app:layout_constraintLeft_toLeftOf="@id/et1_old_pass"
-        app:layout_constraintRight_toRightOf="@id/et1_old_pass"
-        app:layout_constraintTop_toTopOf="@id/et1_old_pass"
-        app:layout_constraintVertical_bias="0.07" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

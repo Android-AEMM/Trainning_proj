@@ -20,24 +20,22 @@ public class SignUp extends AppCompatActivity {
     ImageView show, show2;
     Button btn_signUp;
     static Boolean check1 = false, check2 = false;
-  //  DataBaseHelper db;
-
+    // DataBaseHelper db;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
-        et1_phone=findViewById(R.id.et1_phone);
-        et1_name=findViewById(R.id.et1_name);
-        et1_mail=findViewById(R.id.et1_mail);
+        et1_phone = findViewById(R.id.et1_phone);
+        et1_name = findViewById(R.id.et1_name);
+        et1_mail = findViewById(R.id.et1_mail);
         et1_pass = findViewById(R.id.et1_pass);
         et1_repass = findViewById(R.id.et1_rePass);
         show = findViewById(R.id.show);
         show2 = findViewById(R.id.show2);
-        btn_signUp=findViewById(R.id.btn_signUp);
-      //  db = new DataBaseHelper(this);
-
+        btn_signUp = findViewById(R.id.btn_signUp);
+        //  db = new DataBaseHelper(this);
 
 
         show.setOnClickListener(new View.OnClickListener() {
@@ -79,15 +77,15 @@ public class SignUp extends AppCompatActivity {
         btn_signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String email =et1_mail.getText().toString();
-                String name =et1_name.getText().toString();
-                String repassword =et1_repass.getText().toString();
-                String phone =et1_phone.getText().toString();
-                String password =et1_pass.getText().toString();
-                Intent  intent = new Intent(SignUp.this, SignIn.class);
+                String email = et1_mail.getText().toString();
+                String name = et1_name.getText().toString();
+                String repassword = et1_repass.getText().toString();
+                String phone = et1_phone.getText().toString();
+                String password = et1_pass.getText().toString();
+                Intent intent = new Intent(SignUp.this, SignIn.class);
                 startActivity(intent);
 
-               /* if(TextUtils.isEmpty(name)||TextUtils.isEmpty(email)||TextUtils.isEmpty(phone)||TextUtils.isEmpty(password)||TextUtils.isEmpty(repassword))
+              /*  if(TextUtils.isEmpty(name)||TextUtils.isEmpty(email)||TextUtils.isEmpty(phone)||TextUtils.isEmpty(password)||TextUtils.isEmpty(repassword))
                 {
                     Toast.makeText(SignUp.this, "There's an empty field!", Toast.LENGTH_LONG).show();
                     return ;
@@ -118,7 +116,6 @@ public class SignUp extends AppCompatActivity {
 
             }
         });
-
 
 
     }

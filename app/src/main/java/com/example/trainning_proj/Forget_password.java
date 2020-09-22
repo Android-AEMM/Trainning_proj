@@ -5,70 +5,66 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
+
+import com.example.trainning_proj.Home.Home;
 
 public class Forget_password extends AppCompatActivity {
 
-    EditText et1_pass, et1_repass, et1_mail, et1_phone;
+    EditText et1_name, et1_mail, et1_phone;
     ImageView show, show2;
     Button btn_confirm;
     static Boolean check1 = false, check2 = false;
+    // DataBaseHelper db;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forget_password);
-        et1_phone=findViewById(R.id.et1_phone__forget_pass);
-        et1_mail=findViewById(R.id.et1_mail_forget_pass);
-        et1_pass = findViewById(R.id.et1_pass_forget_pass);
-        et1_repass = findViewById(R.id.et1_rePass_forget_pass);
-        show = findViewById(R.id.show_pass);
-        show2 = findViewById(R.id.show2_pass);
-        btn_confirm=findViewById(R.id.btn_confirm);
-
-        show.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // to make password in password edit text show and hide
-                if (check1 == false) {
-                    et1_pass.setInputType(InputType.TYPE_CLASS_TEXT);
-                    show.setImageResource(R.drawable.ic_baseline_visibility_24);
-                    check1 = true;
-
-                } else {
-                    et1_pass.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-                    show.setImageResource(R.drawable.ic_baseline_visibility_off_24);
-                    check1 = false;
-                }
-            }
-        });
-
-
-        show2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // to make password in re-enter password  edit text show and hide
-
-                if (check2 == false) {
-                    et1_repass.setInputType(InputType.TYPE_CLASS_TEXT);
-                    show2.setImageResource(R.drawable.ic_baseline_visibility_24);
-                    check2 = true;
-
-                } else {
-                    et1_repass.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-                    show2.setImageResource(R.drawable.ic_baseline_visibility_off_24);
-                    check2 = false;
-                }
-            }
-        });
+        et1_phone = findViewById(R.id.et1_phone__forget_pass);
+        et1_mail = findViewById(R.id.et1_mail_forget_pass);
+        // et1_name = findViewById(R.id.et1_name_forget_pass);
+        btn_confirm = findViewById(R.id.btn_confirm);
+        // db = new DataBaseHelper(this);
 
         btn_confirm.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Forget_password.this, SignIn.class);
+            public void onClick(View v) {
+                String email = et1_mail.getText().toString();
+                // String name = et1_name.getText().toString();
+                String phone = et1_phone.getText().toString();
+
+                Intent intent = new Intent(Forget_password.this, Home.class);
+
                 startActivity(intent);
+               /* if ( TextUtils.isEmpty(email) || TextUtils.isEmpty(phone)) {
+                    Toast.makeText(Forget_password.this, "There's an empty field!", Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+
+                int check = db.forget_pass(email,  phone);
+                if (check > 0) {
+                    Toast.makeText(Forget_password.this, "Please,Remeber Change Password", Toast.LENGTH_SHORT).show();
+
+
+
+                    Intent intent = new Intent(Forget_password.this, Home.class);
+                    intent.putExtra("email",email);
+                    et1_mail.setText("");
+                    et1_phone.setText("");
+                    startActivity(intent);
+
+
+                } else {
+                    Toast.makeText(Forget_password.this, "an error occurred", Toast.LENGTH_SHORT).show();
+                }*/
+
             }
         });
     }
