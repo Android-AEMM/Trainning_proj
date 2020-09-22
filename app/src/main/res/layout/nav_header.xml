@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="176dp"
     android:orientation="vertical"
-    android:background="#85EBE7FA"
+    android:background="@color/blue"
     android:gravity="bottom"
     android:theme="@style/ThemeOverlay.AppCompat.Dark"
     android:padding="15dp" >
@@ -12,12 +12,12 @@
         android:layout_width="70dp"
         android:layout_height="60dp"
         android:layout_marginBottom="10dp"
-        android:src="@drawable/logo2"/>
+        android:src="@drawable/logo"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Egy Guide for tourists"
-        android:textColor="@color/gray900"
+        android:textColor="@color/white"
         android:layout_marginBottom="10dp"
         android:textStyle="bold|italic"
         android:textSize="20sp"/>
