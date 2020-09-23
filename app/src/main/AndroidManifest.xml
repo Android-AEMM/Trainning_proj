@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.trainning_proj">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_logo"
@@ -16,6 +18,7 @@
         <activity android:name=".Place.Place" />
         <activity android:name=".Home.Home" />
         <activity android:name=".Exchange_Rates" />
+
         <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

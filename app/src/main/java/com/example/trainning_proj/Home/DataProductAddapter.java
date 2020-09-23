@@ -53,8 +53,6 @@ public class DataProductAddapter extends RecyclerView.Adapter<DataProductAddapte
                 intent.putExtra("price", item.getPrice());
                 intent.putExtra("desc_product", item.getDesc());
 
-
-
                 context.startActivity(intent);
             }
         });

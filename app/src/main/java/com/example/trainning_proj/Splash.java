@@ -23,6 +23,7 @@ public class Splash extends AppCompatActivity {
 
         animation = AnimationUtils.loadAnimation(Splash.this, R.anim.anim);
         animation1 = AnimationUtils.loadAnimation(Splash.this, R.anim.anim1);
+
         imageView.startAnimation(animation);
         imageView_name.startAnimation(animation1);
 

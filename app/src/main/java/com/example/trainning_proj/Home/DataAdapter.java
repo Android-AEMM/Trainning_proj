@@ -28,25 +28,28 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.DataViewHolder
         this.context = context;
     }
 
-    public DataAdapter(Home context, ArrayList<DataProduct> arrayList_product) {
-    }
+
 
     @NonNull
     @Override
     public DataViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+
         View view = LayoutInflater.from(context).inflate(R.layout.card_item, parent, false);
         return new DataViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull DataViewHolder holder, int position) {
+
         final Data data_item = list_data.get(position);
 
         holder.txt_name_card_item.setText(data_item.getName());
         holder.image_card_item.setImageResource(data_item.getImage());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
+
             Intent intent = new Intent(context, Place.class);
+
             @Override
             public void onClick(View v) {
 
@@ -55,7 +58,6 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.DataViewHolder
                 intent.putExtra("image", data_item.getImage());
                 intent.putExtra("address", data_item.getAddress());
                 intent.putExtra("location", data_item.getLocation());
-
 
                 context.startActivity(intent);
             }

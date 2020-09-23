@@ -34,17 +34,19 @@ public class Place extends AppCompatActivity {
         titel = findViewById(R.id.titel);
 
 
-        name_location = getIntent().getStringExtra("location");
 
         titel.setText(getIntent().getStringExtra("name"));
         name.setText(getIntent().getStringExtra("name"));
         address.setText(getIntent().getStringExtra("address"));
         desc.setText(getIntent().getStringExtra("desc"));
+        name_location = getIntent().getStringExtra("location");
         image.setImageResource( getIntent().getIntExtra("image",1));
 
         location.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                //explicite
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(name_location));
                 startActivity(intent);
             }

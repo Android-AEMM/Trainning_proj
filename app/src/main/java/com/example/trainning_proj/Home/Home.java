@@ -28,6 +28,7 @@ import java.util.ArrayList;
 public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     RecyclerView recyclerView_all_place  ,recyclerView_top_place ,recyclerView_by_from_egypt ;
+
     ArrayList<Data> arrayList_place = new ArrayList<>();
     ArrayList<Data> arrayList_famous_place = new ArrayList<>();
 
@@ -35,6 +36,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
     DataAdapter adapter_place ,adapter_famous_place;
     DataProductAddapter adapter_product;
+
     ImageButton imageButton_setting ;
 
     private DrawerLayout drawerLayout;
@@ -271,6 +273,8 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
 
         //// what you buy from egypt
+
+
         arrayList_product.add(new DataProduct(R.drawable.bastet,"Bastet, Antique Stones, and Statues Replicas" ,
                 "Small blue scarab stone: 7~15 pounds\n" +
                         "Medium Bastet statue \"about 25cm tall: 50 ~ 250 pounds (depending on material [plastic-granite-alabaster] used)\n" +
@@ -319,6 +323,10 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
 
 
+
+
+
+
         // object from DataAdapter send (context , array from data)
         adapter_place = new DataAdapter(Home.this, arrayList_place);
         adapter_famous_place = new DataAdapter(Home.this, arrayList_famous_place);
@@ -326,7 +334,6 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
 
 
-        //recyclerView.setHasFixedSize(true);
 
         /// all place
         recyclerView_all_place.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
