@@ -113,10 +113,5 @@ public class SignIn extends AppCompatActivity {
         });
     }
 
-    @Override
-    protected void onDestroy() {
-        finish();
-        System.exit(0);
-        super.onDestroy();
-    }
+
 }

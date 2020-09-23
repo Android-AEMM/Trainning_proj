@@ -10,7 +10,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 public class DataBaseHelper extends SQLiteOpenHelper {
-    public static final String DATABASE_NAME = "ProjectData2";
+    public static final String DATABASE_NAME = "ProjectData3";
     public static final String TABLE_NAME = "registuser";
     public static final String COL_1 = "ID";
     public static final String COL_2 = "name";
