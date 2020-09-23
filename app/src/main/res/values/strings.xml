@@ -23,5 +23,6 @@
     <string name="abo_elhole">Sphinx</string>
     <string name="confirm">Confirm</string>
     <string name="old_pass">Old Password</string>
-    <string name="app_info">App info</string>
+    <string name="app_info">App info :</string>>
+      <string name="app_info2">The application is used to display an important landmarks in Egypt, Top places to visit and the things which you can buy from Egypt</string>
 </resources>

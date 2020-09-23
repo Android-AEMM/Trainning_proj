@@ -5,24 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white"
+    android:background="#E4FEF9FF"
     tools:context=".App_info">
     <Toolbar
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="55dp"
         android:background="@color/blue">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/app_info"
+            android:text="App Info"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="24sp"
 
             />
     </Toolbar>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -30,53 +32,68 @@
             android:padding="10dp">
 
             <ImageView
-                android:layout_width="100dp"
+                android:layout_width="150dp"
                 android:layout_height="100dp"
-                android:src="@drawable/logo"/>
+                android:layout_gravity="center"
+                android:src="@drawable/logo" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/alegreya_italic"
                 android:text="@string/app_name"
                 android:textColor="@color/blue"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:fontFamily="@font/alegreya_italic"
-                android:layout_margin="5dp"
-                />
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/desc_app"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:textStyle="bold"
                 android:text="@string/app_info"
                 android:textColor="@color/blue"
-                android:textSize="20sp"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/desc_app2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                />
+                android:singleLine="false"
+                android:text="      The application is used to display an important landmarks in Egypt, Top places to visit and the things which you can buy from Egypt."
+                android:textColor="@color/blue"
+                android:textSize="18sp" />
+
             <View
                 android:layout_width="300dp"
                 android:layout_height="1dp"
-                android:background="@color/blue"
-                android:layout_marginTop="15dp"
                 android:layout_gravity="center"
-                />
+                android:layout_marginTop="15dp"
+                android:background="@color/blue" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="5dp">
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/img_gamal"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/logo_transparent"/>
+                    android:src="@drawable/gamal" />
+
                 <View
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
-                    android:background="@color/blue"
-                    android:layout_marginTop="15dp"
                     android:layout_gravity="center"
-                    />
+                    android:layout_marginTop="15dp"
+                    android:background="@color/blue" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -86,43 +103,47 @@
                         android:id="@+id/name_gamal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="name"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/alegreya_italic"
+                        android:text="Muhammed Gamal Abd-Elmotalb"
                         android:textColor="@color/blue"
                         android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:fontFamily="@font/alegreya_italic"
-                        android:layout_marginLeft="5dp"
-                        />
+                        android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/inf_gamal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="name"
-                        android:textColor="@color/gray900"
-                        android:textSize="20sp"
                         android:layout_marginLeft="5dp"
-                        />
+                        android:singleLine="false"
+                        android:text="⬤ Student in faculty of Computers and Artificial Intelligence at 3rd year, Banha University.
+                                      ⬤ Android developer."
+                        android:textColor="@color/gray900"
+                        android:textSize="18sp" />
                 </LinearLayout>
 
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="5dp">
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/img_ehab"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/logo_transparent"/>
+                    android:src="@drawable/ehab" />
+
                 <View
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
-                    android:background="@color/blue"
-                    android:layout_marginTop="15dp"
                     android:layout_gravity="center"
-                    />
+                    android:layout_marginTop="15dp"
+                    android:background="@color/blue" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -132,44 +153,47 @@
                         android:id="@+id/name_ehab"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="name"
-                        android:textStyle="bold"
+                        android:layout_marginLeft="5dp"
                         android:fontFamily="@font/alegreya_italic"
+                        android:text="Muhammed Ehab Abd Elghaney Shreif "
                         android:textColor="@color/blue"
                         android:textSize="20sp"
-                        android:layout_marginLeft="5dp"
-                        />
+                        android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/info_ehab"
-                        android:textColor="@color/gray900"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="name"
-                        android:textSize="20sp"
                         android:layout_marginLeft="5dp"
-                        />
+                        android:singleLine="false"
+                        android:text="⬤ Student in faculty of Computers and Artificial Intelligence at 3rd year, Banha University.
+                                      ⬤ Android developer."
+                        android:textColor="@color/gray900"
+                        android:textSize="18sp" />
                 </LinearLayout>
 
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="5dp">
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/img_aya"
-
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/logo_transparent"/>
+                    android:src="@drawable/aya" />
+
                 <View
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
-                    android:background="@color/blue"
-                    android:layout_marginTop="15dp"
                     android:layout_gravity="center"
-                    />
+                    android:layout_marginTop="15dp"
+                    android:background="@color/blue" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -179,44 +203,48 @@
                         android:id="@+id/name_aya"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="name"
-                        android:textStyle="bold"
+                        android:layout_marginLeft="5dp"
                         android:fontFamily="@font/alegreya_italic"
+                        android:text="Aya Sherif Mohamed Talaat ElHofy"
                         android:textColor="@color/blue"
                         android:textSize="20sp"
-                        android:layout_marginLeft="5dp"
-                        />
+                        android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/info_aya"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="name"
-                        android:textColor="@color/gray900"
-                        android:textSize="20sp"
                         android:layout_marginLeft="5dp"
-                        />
+                        android:singleLine="false"
+                        android:text="⬤ Student in faculty of Computers and Artificial Intelligence at 3rd year, Banha University.
+                                      ⬤ Android developer."
+                        android:textColor="@color/gray900"
+                        android:textSize="18sp" />
                 </LinearLayout>
 
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="5dp">
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/img_eman"
 
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/logo_transparent"/>
+                    android:src="@drawable/emy" />
+
                 <View
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
-                    android:background="@color/blue"
-                    android:layout_marginTop="15dp"
                     android:layout_gravity="center"
-                    />
+                    android:layout_marginTop="15dp"
+                    android:background="@color/blue" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -224,24 +252,25 @@
 
                     <TextView
                         android:id="@+id/name_eman"
-                        android:textStyle="bold"
-                        android:fontFamily="@font/alegreya_italic"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="name"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/alegreya_italic"
+                        android:text="Eman Wael Metwally"
                         android:textColor="@color/blue"
                         android:textSize="20sp"
-                        android:layout_marginLeft="5dp"
-                        />
+                        android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/info_eman"
-                        android:textColor="@color/gray900"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="name"
-                        android:textSize="20sp"
                         android:layout_marginLeft="5dp"
-                        />
+                        android:singleLine="false"
+                        android:text="⬤ Student in faculty of Computers and Artificial Intelligence at 3rd year, Banha University.
+                                      ⬤ Android developer."
+                        android:textColor="@color/gray900"
+                        android:textSize="18sp" />
                 </LinearLayout>
 
 
