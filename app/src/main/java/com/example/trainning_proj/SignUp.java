@@ -24,7 +24,7 @@ public class SignUp extends AppCompatActivity {
     static Boolean check1 = false, check2 = false;
     Animation animation;
 
-    // DataBaseHelper db;
+     DataBaseHelper db;
 
 
     @Override
@@ -39,7 +39,7 @@ public class SignUp extends AppCompatActivity {
         show = findViewById(R.id.show);
         show2 = findViewById(R.id.show2);
         btn_signUp = findViewById(R.id.btn_signUp);
-        //  db = new DataBaseHelper(this);
+          db = new DataBaseHelper(this);
 
         animation = AnimationUtils.loadAnimation(SignUp.this, R.anim.blink_anim);
 
@@ -92,10 +92,11 @@ public class SignUp extends AppCompatActivity {
                 String repassword = et1_repass.getText().toString();
                 String phone = et1_phone.getText().toString();
                 String password = et1_pass.getText().toString();
-                Intent intent = new Intent(SignUp.this, SignIn.class);
-                startActivity(intent);
 
-              /*  if(TextUtils.isEmpty(name)||TextUtils.isEmpty(email)||TextUtils.isEmpty(phone)||TextUtils.isEmpty(password)||TextUtils.isEmpty(repassword))
+               // Intent intent = new Intent(SignUp.this, SignIn.class);
+              //  startActivity(intent);
+
+                if(TextUtils.isEmpty(name)||TextUtils.isEmpty(email)||TextUtils.isEmpty(phone)||TextUtils.isEmpty(password)||TextUtils.isEmpty(repassword))
                 {
                     Toast.makeText(SignUp.this, "There's an empty field!", Toast.LENGTH_LONG).show();
                     return ;
@@ -116,13 +117,18 @@ public class SignUp extends AppCompatActivity {
 
                     }
                     else{
-                        Toast.makeText(SignUp.this, "an error occurred", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SignUp.this, "An Error occurred, E-mail or phone may already be used", Toast.LENGTH_SHORT).show();
+                        et1_name.setText("");
+                        et1_mail.setText("");
+                        et1_repass.setText("");
+                        et1_phone.setText("");
+                        et1_pass.setText("");
                     }
 
                 } else {
                     Toast.makeText(SignUp.this, "The password don't match ", Toast.LENGTH_SHORT).show();
 
-                }*/
+                }
 
             }
         });

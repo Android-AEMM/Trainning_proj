@@ -26,8 +26,9 @@ public class Exchange_Rates extends AppCompatActivity implements LoaderManager.L
     ProgressBar progressBar;
 
     TextView item;
+
     static ArrayList<String> currency =new ArrayList<>();
-    private static String CURRENCY_URL = "https://jsonware.com/json/6b73abddc0812d1ef8e3632f5d79c6c2.json";
+    private static String CURRENCY_URL = "https://jsonware.com/json/f2c0cd31db3564b1400953a1ddafc546.json";
 
 
     protected void onCreate(Bundle savedInstanceState) {

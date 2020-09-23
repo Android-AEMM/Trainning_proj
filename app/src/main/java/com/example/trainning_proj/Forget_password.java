@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.trainning_proj.Home.Home;
+import com.example.trainning_proj.Setting.Setting;
 
 public class Forget_password extends AppCompatActivity {
 
@@ -23,7 +24,7 @@ public class Forget_password extends AppCompatActivity {
     Button btn_confirm;
     static Boolean check1 = false, check2 = false;
     Animation animation;
-    // DataBaseHelper db;
+     DataBaseHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +34,7 @@ public class Forget_password extends AppCompatActivity {
         et1_mail = findViewById(R.id.et1_mail_forget_pass);
         // et1_name = findViewById(R.id.et1_name_forget_pass);
         btn_confirm = findViewById(R.id.btn_confirm);
-        // db = new DataBaseHelper(this);
+         db = new DataBaseHelper(this);
 
         animation = AnimationUtils.loadAnimation(Forget_password.this, R.anim.blink_anim);
 
@@ -47,10 +48,9 @@ public class Forget_password extends AppCompatActivity {
                 // String name = et1_name.getText().toString();
                 String phone = et1_phone.getText().toString();
 
-                Intent intent = new Intent(Forget_password.this, Home.class);
-
-                startActivity(intent);
-               /* if ( TextUtils.isEmpty(email) || TextUtils.isEmpty(phone)) {
+               // Intent intent = new Intent(Forget_password.this, Home.class);
+                //startActivity(intent);
+                if ( TextUtils.isEmpty(email) || TextUtils.isEmpty(phone)) {
                     Toast.makeText(Forget_password.this, "There's an empty field!", Toast.LENGTH_LONG).show();
                     return;
                 }
@@ -60,18 +60,18 @@ public class Forget_password extends AppCompatActivity {
                 if (check > 0) {
                     Toast.makeText(Forget_password.this, "Please,Remeber Change Password", Toast.LENGTH_SHORT).show();
 
-
-
-                    Intent intent = new Intent(Forget_password.this, Home.class);
-                    intent.putExtra("email",email);
                     et1_mail.setText("");
                     et1_phone.setText("");
+
+                    Intent intent = new Intent(Forget_password.this, Setting.class);
+                   // intent.putExtra("email",email);
+
                     startActivity(intent);
 
 
                 } else {
                     Toast.makeText(Forget_password.this, "an error occurred", Toast.LENGTH_SHORT).show();
-                }*/
+                }
 
             }
         });

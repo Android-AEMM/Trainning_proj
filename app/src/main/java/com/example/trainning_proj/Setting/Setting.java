@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -13,7 +14,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-//import com.example.trainning_proj.DataBaseHelper;
+import com.example.trainning_proj.DataBaseHelper;
 import com.example.trainning_proj.Forget_password;
 import com.example.trainning_proj.Home.Home;
 import com.example.trainning_proj.R;
@@ -29,7 +30,7 @@ public class Setting extends AppCompatActivity {
     Button btn_confirm;
     Animation animation;
 
-    //DataBaseHelper db;
+    DataBaseHelper db;
     static Boolean check1 = false, check2 = false;
 
     @Override
@@ -51,7 +52,7 @@ public class Setting extends AppCompatActivity {
         show_current_pass = findViewById(R.id.show_current_pass);
         show_current_repass = findViewById(R.id.show2_current_pass);
         btn_confirm = findViewById(R.id.btn1_confirm_change);
-        // db = new DataBaseHelper(this);
+         db = new DataBaseHelper(this);
 
 
     /*    if (getIntent() != null) {
@@ -105,11 +106,15 @@ public class Setting extends AppCompatActivity {
                 String email = edt_mail.getText().toString().trim();
                 String new_pass = edt_current_pass.getText().toString().trim();
                 String re_new_pass = edt_current_repass.getText().toString().trim();
-                Intent intent = new Intent(Setting.this, Home.class);
-                startActivity(intent);
+                //Intent intent = new Intent(Setting.this, Home.class);
+                //startActivity(intent);
 
+                if ( TextUtils.isEmpty(email) || TextUtils.isEmpty(new_pass) || TextUtils.isEmpty(re_new_pass)) {
+                    Toast.makeText(Setting.this, "There's an empty field!", Toast.LENGTH_LONG).show();
+                    return;
+                }
 
-               /* if (new_pass.equals(re_new_pass)) {
+                if (new_pass.equals(re_new_pass)) {
                     if (db.change(email, new_pass) )
                         Toast.makeText(getBaseContext(), "Update Failed !", Toast.LENGTH_SHORT).show();
 
@@ -124,7 +129,7 @@ public class Setting extends AppCompatActivity {
 
                 }
                 else
-                    Toast.makeText(Setting.this, "The password don't match ", Toast.LENGTH_SHORT).show();*/
+                    Toast.makeText(Setting.this, "The password don't match ", Toast.LENGTH_SHORT).show();
             }
         });
     }

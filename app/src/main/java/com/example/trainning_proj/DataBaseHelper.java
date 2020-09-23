@@ -1,4 +1,4 @@
-/*package com.example.trainning_proj;
+package com.example.trainning_proj;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -10,7 +10,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 public class DataBaseHelper extends SQLiteOpenHelper {
-    public static final String DATABASE_NAME = "user";
+    public static final String DATABASE_NAME = "ProjectData";
     public static final String TABLE_NAME = "registuser";
     public static final String COL_1 = "ID";
     public static final String COL_2 = "name";
@@ -72,7 +72,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
        /*if (count > 0) {
             return true;
         } else
-            return false;
+            return false;*/
         return count;
     }
 
@@ -85,7 +85,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                 return true;
             }
         }
-        return false;
+        return false;*/
         int count = cur.getCount();
         cur.close();
         db.close();
@@ -108,4 +108,4 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
         return count;
     }
-}*/
+}
