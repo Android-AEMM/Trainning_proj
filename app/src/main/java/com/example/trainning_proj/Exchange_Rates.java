@@ -1,6 +1,7 @@
 package com.example.trainning_proj;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -16,6 +17,9 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.loader.app.LoaderManager;
 import androidx.loader.content.Loader;
+
+import com.example.trainning_proj.Home.Home;
+import com.example.trainning_proj.Setting.Setting;
 
 import java.util.ArrayList;
 
@@ -68,4 +72,10 @@ public class Exchange_Rates extends AppCompatActivity implements LoaderManager.L
     public void onLoaderReset(@NonNull Loader<ArrayList<String>> loader) {
 
     }
+    @Override
+    protected void onStop() {
+        startActivity(new Intent(Exchange_Rates.this, Home.class));
+        super.onStop();
+    }
+
 }
