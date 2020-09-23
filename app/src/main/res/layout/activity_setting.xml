@@ -34,7 +34,7 @@
         android:layout_marginTop="4dp"
         android:background="@drawable/edt_background"
 
-        android:hint="@string/pass"
+        android:hint="Enter New Password"
         android:inputType="textPassword"
         android:padding="10dp"
         android:textColorHint="@color/gray700"
@@ -50,7 +50,7 @@
         android:layout_height="70dp"
         android:layout_margin="7dp"
         android:background="@drawable/edt_background"
-        android:hint="Enter new password"
+        android:hint="Renter new password"
         android:inputType="textPassword"
         android:padding="10dp"
         android:textColorHint="@color/gray700"
