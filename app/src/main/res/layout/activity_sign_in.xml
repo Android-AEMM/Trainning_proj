@@ -91,7 +91,7 @@
         android:layout_height="70dp"
         android:text="@string/btn_signUp"
         android:textColor="@color/white"
-        android:textSize="24dp"
+        android:textSize="22dp"
         android:layout_marginTop="20dp"
         android:textStyle="bold|italic"
         android:background="@drawable/btn_background"
