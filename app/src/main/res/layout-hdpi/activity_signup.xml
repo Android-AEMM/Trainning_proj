@@ -36,6 +36,8 @@
         android:padding="10dp"
         android:textColorHint="@color/gray700"
         android:textSize="20sp"
+        android:inputType="textEmailAddress"
+
         app:layout_constraintLeft_toLeftOf="@id/layout_signUp"
         app:layout_constraintRight_toRightOf="@id/layout_signUp"
         app:layout_constraintTop_toBottomOf="@id/et1_name" />
@@ -46,6 +48,7 @@
         android:layout_height="50dp"
         android:layout_margin="7dp"
         android:background="@drawable/edt_background"
+        android:inputType="phone"
 
         android:drawableRight="@drawable/ic_baseline_phone_24"
         android:hint="@string/mobile"

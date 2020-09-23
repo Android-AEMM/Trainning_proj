@@ -50,6 +50,7 @@
         android:drawableRight="@drawable/ic_baseline_phone_24"
         android:hint="@string/mobile"
         android:padding="10dp"
+
         android:textColorHint="@color/gray700"
         android:textSize="24sp"
         app:layout_constraintLeft_toLeftOf="@id/layout_signUp"
