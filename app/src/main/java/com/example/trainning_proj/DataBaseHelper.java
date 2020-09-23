@@ -75,7 +75,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
             return false;
     }
 
-    public boolean change(String email, String strNewPin1) {
+    public Boolean change(String email, String strNewPin1) {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cur = db.rawQuery("UPDATE " + TABLE_NAME + " SET " + COL_5 + " = '" + strNewPin1 + "' WHERE " + COL_3 + "=?", new String[]{email});
 
