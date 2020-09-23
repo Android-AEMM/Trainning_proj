@@ -12,6 +12,7 @@
         android:id="@+id/et1_mail_change"
         android:layout_width="350dp"
         android:layout_height="70dp"
+        android:inputType="textEmailAddress"
         android:layout_marginTop="50dp"
         android:background="@drawable/edt_background"
         android:drawableRight="@drawable/ic_email"

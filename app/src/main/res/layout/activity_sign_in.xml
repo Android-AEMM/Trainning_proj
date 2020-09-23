@@ -17,6 +17,7 @@
         android:layout_margin="7dp"
         android:drawableRight="@drawable/ic_email"
         android:textSize="24sp"
+        android:inputType="textEmailAddress"
         android:padding="10dp"
         android:hint="@string/email"
         app:layout_constraintLeft_toLeftOf="@id/layout_signIn"
@@ -29,7 +30,7 @@
         android:layout_height="70dp"
         android:background="@drawable/edt_background"
         android:layout_margin="7dp"
-
+        android:inputType="numberPassword"
         android:textSize="24sp"
         android:padding="10dp"
         android:hint="@string/pass"
