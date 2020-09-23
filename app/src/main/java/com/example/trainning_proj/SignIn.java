@@ -55,9 +55,6 @@ public class SignIn extends AppCompatActivity {
             public void onClick(View view) {
 
                 btn_login.startAnimation(animation);
-               /* intent1 = new Intent(SignIn.this, Home.class);
-                startActivity(intent1);
-                finish();*/
                String email = et2_mail.getText().toString();
               String password = et2_pass.getText().toString();
 
@@ -66,14 +63,14 @@ public class SignIn extends AppCompatActivity {
                     return;
                 }
 
-               int check = db.isLoginUser(email,password);
-                if (check > 0) {
+
+                if (db.isLoginUser(email,password)) {
                     Toast.makeText(SignIn.this, "Login Successful" , Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(SignIn.this, Home.class);
                     intent.putExtra("email",email);
                     startActivity(intent);
                 } else {
-                    Toast.makeText(SignIn.this, "Login Faild", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignIn.this, "Login failed", Toast.LENGTH_SHORT).show();
                 }
             }
         });

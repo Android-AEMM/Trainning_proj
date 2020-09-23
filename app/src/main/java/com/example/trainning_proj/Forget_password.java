@@ -48,24 +48,19 @@ public class Forget_password extends AppCompatActivity {
                 // String name = et1_name.getText().toString();
                 String phone = et1_phone.getText().toString();
 
-               // Intent intent = new Intent(Forget_password.this, Home.class);
-                //startActivity(intent);
                 if ( TextUtils.isEmpty(email) || TextUtils.isEmpty(phone)) {
                     Toast.makeText(Forget_password.this, "There's an empty field!", Toast.LENGTH_LONG).show();
                     return;
                 }
 
 
-                int check = db.forget_pass(email,  phone);
-                if (check > 0) {
-                    Toast.makeText(Forget_password.this, "Please,Remeber Change Password", Toast.LENGTH_SHORT).show();
 
+                if (db.forget_pass(email,  phone)) {
+                    Toast.makeText(Forget_password.this, "Please,Remember Change Password", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(Forget_password.this, Setting.class);
+                    intent.putExtra("email",email);
                     et1_mail.setText("");
                     et1_phone.setText("");
-
-                    Intent intent = new Intent(Forget_password.this, Setting.class);
-                   // intent.putExtra("email",email);
-
                     startActivity(intent);
 
 

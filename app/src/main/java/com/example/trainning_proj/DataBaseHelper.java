@@ -10,7 +10,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 public class DataBaseHelper extends SQLiteOpenHelper {
-    public static final String DATABASE_NAME = "ProjectData";
+    public static final String DATABASE_NAME = "ProjectData2";
     public static final String TABLE_NAME = "registuser";
     public static final String COL_1 = "ID";
     public static final String COL_2 = "name";
@@ -58,10 +58,10 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         return check;
     }
 
-    public int isLoginUser(String email, String password) {
+    public Boolean isLoginUser(String email, String password) {
 
         SQLiteDatabase db = this.getReadableDatabase();
-        String selection = COL_3 + "=?" + "and" + COL_5 + "=?";
+        //String selection = COL_3 + "=?" + "and" + COL_5 + "=?";
         String[] selectionArgs = {email, password};
         Cursor cursor = db.rawQuery("Select * from registuser where email =? and password =? ", selectionArgs);
         //query(TABLE_NAME, columns, selection, selectionArgs, null, null, null);
@@ -69,23 +69,16 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         cursor.close();
         db.close();
 
-       /*if (count > 0) {
+       if (count > 0) {
             return true;
         } else
-            return false;*/
-        return count;
+            return false;
     }
 
     public boolean change(String email, String strNewPin1) {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cur = db.rawQuery("UPDATE " + TABLE_NAME + " SET " + COL_5 + " = '" + strNewPin1 + "' WHERE " + COL_3 + "=?", new String[]{email});
 
-       /* if (cur != null) {
-            if (cur.getCount() > 0) {
-                return true;
-            }
-        }
-        return false;*/
         int count = cur.getCount();
         cur.close();
         db.close();
@@ -95,17 +88,18 @@ public class DataBaseHelper extends SQLiteOpenHelper {
             return false;
     }
 
-    public int forget_pass( String email, String phone) {
+    public Boolean forget_pass( String email, String phone) {
 
         SQLiteDatabase db = this.getReadableDatabase();
-        String selection = COL_2 + "=?" + "and" + COL_3 + "=? "+ "and" + COL_4 + "=? ";
         String[] selectionArgs = { email, phone};
         Cursor cursor = db.rawQuery("Select * from registuser where  email =? and phone =?", selectionArgs);
-        //query(TABLE_NAME, columns, selection, selectionArgs, null, null, null);
         int count = cursor.getCount();
         cursor.close();
         db.close();
+        if(count>0)
+            return true;
+        else
+            return false;
 
-        return count;
     }
 }

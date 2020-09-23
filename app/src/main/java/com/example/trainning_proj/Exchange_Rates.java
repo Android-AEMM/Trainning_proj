@@ -25,13 +25,11 @@ import java.util.ArrayList;
 
 public class Exchange_Rates extends AppCompatActivity implements LoaderManager.LoaderCallbacks<ArrayList<String>> {
 
-     ListView lv;
-
+    ListView lv;
     ProgressBar progressBar;
-
     TextView item;
 
-    static ArrayList<String> currency =new ArrayList<>();
+    static ArrayList<String> currency = new ArrayList<>();
     private static String CURRENCY_URL = "https://jsonware.com/json/f2c0cd31db3564b1400953a1ddafc546.json";
 
 
@@ -39,8 +37,8 @@ public class Exchange_Rates extends AppCompatActivity implements LoaderManager.L
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exchange__rates);
 
-        lv=findViewById(R.id.listView);
-        item=findViewById(R.id.list_item);
+        lv = findViewById(R.id.listView);
+        item = findViewById(R.id.list_item);
         progressBar = findViewById(R.id.pb_progress);
 
 
@@ -60,10 +58,9 @@ public class Exchange_Rates extends AppCompatActivity implements LoaderManager.L
     public void onLoadFinished(@NonNull Loader<ArrayList<String>> loader, ArrayList<String> currency) {
         progressBar.setVisibility(View.GONE);
         if (currency.size() == 0)
-            Toast.makeText(getApplicationContext(), "No Internet Connection size", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "No Internet Connection, No Data", Toast.LENGTH_SHORT).show();
 
         ArrayAdapter<String> currencyAdapter = new ArrayAdapter<>(getApplicationContext(), R.layout.listitem, currency);
-
 
         lv.setAdapter(currencyAdapter);
     }
@@ -72,10 +69,6 @@ public class Exchange_Rates extends AppCompatActivity implements LoaderManager.L
     public void onLoaderReset(@NonNull Loader<ArrayList<String>> loader) {
 
     }
-    @Override
-    protected void onStop() {
-        startActivity(new Intent(Exchange_Rates.this, Home.class));
-        super.onStop();
-    }
+
 
 }

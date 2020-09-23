@@ -112,7 +112,8 @@ public class SignUp extends AppCompatActivity {
                         et1_repass.setText("");
                         et1_phone.setText("");
                         et1_pass.setText("");
-                      Intent  intent = new Intent(SignUp.this, SignIn.class);
+                      Intent  intent = new Intent(SignUp.this, Home.class);
+                        intent.putExtra("email",email);
                         startActivity(intent);
 
                     }
