@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/backgrond"
     tools:context=".SignUp"
-    android:padding="40dp">
+    android:padding="35dp">
 
     <EditText
         android:id="@+id/et1_name"

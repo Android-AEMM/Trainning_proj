@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:background="@drawable/backgrond"
     android:id="@+id/layout_signIn"
-    android:paddingTop="200dp"
+    android:paddingTop="180dp"
     android:layout_height="match_parent"
     tools:context=".SignIn">
     <EditText
@@ -90,11 +90,11 @@
         android:layout_width="100dp"
         android:layout_height="70dp"
         android:text="@string/btn_signUp"
-        android:textColor="@color/gray900"
+        android:textColor="@color/white"
         android:textSize="24dp"
         android:layout_marginTop="20dp"
         android:textStyle="bold|italic"
-        android:background="#94E1CBCB"
+        android:background="@drawable/btn_background"
         android:textAllCaps="false"
         android:layout_marginLeft="160dp"
         app:layout_constraintLeft_toLeftOf="@id/layout_signIn"
