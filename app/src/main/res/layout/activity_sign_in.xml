@@ -37,9 +37,24 @@
         app:layout_constraintRight_toRightOf="@id/layout_signIn"
         app:layout_constraintTop_toBottomOf="@id/et2_mail"
         android:textColorHint="@color/gray700"/>
+    <TextView
+        android:id="@+id/tv2_forgot_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="190dp"
+        android:textColor="@color/blue"
+        app:layout_constraintLeft_toLeftOf="@id/layout_signIn"
+        app:layout_constraintRight_toRightOf="@id/layout_signIn"
+        app:layout_constraintTop_toBottomOf="@id/et2_pass"
+        app:layout_constraintBottom_toTopOf="@id/btn2_signIn"
+        android:text="Forgot Password?"/>
+
     <Button
         android:id="@+id/btn2_signIn"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="90dp"
         android:gravity="center"
         android:layout_width="250dp"
         android:layout_height="55dp"
