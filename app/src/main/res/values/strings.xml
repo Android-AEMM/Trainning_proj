@@ -18,6 +18,7 @@
 
     <string name="navigation_drawer_open">open navigation drawer</string>
     <string name="navigation_drawer_close">close navigation drawer</string>
+
     <string name="product_name">Product name</string>
     <string name="price">Price</string>
     <string name="abo_elhole">Sphinx</string>

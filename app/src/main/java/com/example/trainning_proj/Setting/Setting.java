@@ -133,4 +133,10 @@ public class Setting extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    protected void onStop() {
+        startActivity(new Intent(Setting.this,Home.class));
+        super.onStop();
+    }
 }
