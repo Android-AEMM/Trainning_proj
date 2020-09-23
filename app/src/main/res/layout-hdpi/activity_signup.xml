@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/backgrond"
     tools:context=".SignUp"
-    android:paddingTop="50dp">
+    android:padding="40dp">
 
     <EditText
         android:id="@+id/et1_name"
@@ -19,7 +19,7 @@
         android:hint="@string/Name"
         android:padding="10dp"
         android:textColorHint="@color/gray700"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintLeft_toLeftOf="@id/layout_signUp"
         app:layout_constraintRight_toRightOf="@id/layout_signUp"
         app:layout_constraintTop_toTopOf="@id/layout_signUp" />
@@ -34,7 +34,7 @@
         android:hint="@string/email"
         android:padding="10dp"
         android:textColorHint="@color/gray700"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintLeft_toLeftOf="@id/layout_signUp"
         app:layout_constraintRight_toRightOf="@id/layout_signUp"
         app:layout_constraintTop_toBottomOf="@id/et1_name" />
@@ -50,7 +50,7 @@
         android:hint="@string/mobile"
         android:padding="10dp"
         android:textColorHint="@color/gray700"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintLeft_toLeftOf="@id/layout_signUp"
         app:layout_constraintRight_toRightOf="@id/layout_signUp"
         app:layout_constraintTop_toBottomOf="@id/et1_mail" />
@@ -83,7 +83,7 @@
         android:inputType="textPassword"
         android:padding="10dp"
         android:textColorHint="@color/gray700"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintLeft_toLeftOf="@id/layout_signUp"
         app:layout_constraintRight_toRightOf="@id/layout_signUp"
         app:layout_constraintTop_toBottomOf="@id/et1_pass" />
@@ -91,7 +91,7 @@
     <Button
         android:id="@+id/btn_signUp"
         android:layout_width="230dp"
-        android:layout_height="40dp"
+        android:layout_height="45dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/btn_background"
         android:fontFamily="@font/alegreya_italic"
@@ -99,7 +99,7 @@
         android:textAllCaps="false"
         android:gravity="center"
         android:text="@string/btn_signUp"
-        android:textSize="24dp"
+        android:textSize="22dp"
         android:textStyle="bold|italic"
         app:layout_constraintLeft_toLeftOf="@id/layout_signUp"
         app:layout_constraintRight_toRightOf="@id/layout_signUp"

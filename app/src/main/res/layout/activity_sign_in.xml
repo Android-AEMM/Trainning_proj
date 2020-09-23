@@ -44,7 +44,7 @@
         android:textSize="23sp"
         android:textStyle="bold"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="190dp"
+        android:layout_marginLeft="150dp"
         android:textColor="@color/blue"
         app:layout_constraintLeft_toLeftOf="@id/layout_signIn"
         app:layout_constraintRight_toRightOf="@id/layout_signIn"
