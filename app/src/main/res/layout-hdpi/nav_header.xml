@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:orientation="vertical"
+    android:background="@color/blue"
+    android:gravity="bottom"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:padding="12dp" >
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="14dp"
+        android:src="@drawable/logo"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Egy Guide for tourists"
+        android:textColor="@color/white"
+        android:layout_marginBottom="7dp"
+        android:textStyle="bold|italic"
+        android:textSize="18sp"/>
+</LinearLayout>
