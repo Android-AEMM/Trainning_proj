@@ -61,6 +61,7 @@ public class SignIn extends AppCompatActivity {
                if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
                     Toast.makeText(SignIn.this, "Email OR password field is empty!", Toast.LENGTH_LONG).show();
                     return;
+
                 }
 
 
@@ -69,8 +70,11 @@ public class SignIn extends AppCompatActivity {
                     Intent intent = new Intent(SignIn.this, Home.class);
                     intent.putExtra("email",email);
                     startActivity(intent);
+                    et2_mail.setText("");
+                    et2_pass.setText("");
                 } else {
                     Toast.makeText(SignIn.this, "Login failed", Toast.LENGTH_SHORT).show();
+
                 }
             }
         });
