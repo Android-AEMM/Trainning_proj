@@ -117,7 +117,7 @@
                         android:layout_marginLeft="5dp"
                         android:singleLine="false"
                         android:text="⬤ Student in faculty of Computers and Artificial Intelligence at 3rd year, Banha University.
-                                      ⬤ Android developer."
+                                                               ⬤ Android developer."
                         android:textColor="@color/gray900"
                         android:textSize="16sp" />
                 </LinearLayout>
@@ -167,7 +167,7 @@
                         android:layout_marginLeft="3dp"
                         android:singleLine="false"
                         android:text="⬤ Student in faculty of Computers and Artificial Intelligence at 3rd year, Banha University.
-                                      ⬤ Android developer."
+                                                                           ⬤ Android developer."
                         android:textColor="@color/gray900"
                         android:textSize="16sp" />
                 </LinearLayout>
@@ -217,7 +217,7 @@
                         android:layout_marginLeft="5dp"
                         android:singleLine="false"
                         android:text="⬤ Student in faculty of Computers and Artificial Intelligence at 3rd year, Banha University.
-                                      ⬤ Android developer."
+                                                                 ⬤ Android developer."
                         android:textColor="@color/gray900"
                         android:textSize="16sp" />
                 </LinearLayout>
@@ -267,7 +267,7 @@
                         android:layout_marginLeft="3dp"
                         android:singleLine="false"
                         android:text="⬤ Student in faculty of Computers and Artificial Intelligence at 3rd year, Banha University.
-                                      ⬤ Android developer."
+                                                                                     ⬤ Android developer."
                         android:textColor="@color/gray900"
                         android:textSize="16sp" />
                 </LinearLayout>
